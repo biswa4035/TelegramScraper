@@ -22,9 +22,9 @@ import traceback
 import time
 import random
 
-api_id = '1422471'   #Enter Your 7 Digit Telegram API ID.
-api_hash = '1f35396ebcf24d83346d00ec29e6efb9'   #Enter Yor 32 Character API Hash
-phone = '+919954772222'   #Enter Your Mobilr Number With Country Code.
+api_id = '1859637'   #Enter Your 7 Digit Telegram API ID.
+api_hash = '0f476775b5b2a4f021dc8534c362eb74'   #Enter Yor 32 Character API Hash
+phone = '+916001459754'   #Enter Your Mobilr Number With Country Code.
 client = TelegramClient(phone, api_id, api_hash)
 async def main():
     # Now you can use all client methods listed below, like for example...
@@ -104,7 +104,7 @@ for user in users:
             sys.exit("Invalid Mode Selected. Please Try Again.")
         client(InviteToChannelRequest(target_group_entity, [user_to_add]))
         print("Waiting for 60-180 Seconds ...")
-        time.sleep(random.randrange(0, 5))
+        time.sleep(random.randrange(60, 180))
     except PeerFloodError:
         print("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
         print("Waiting {} seconds".format(SLEEP_TIME_2))
